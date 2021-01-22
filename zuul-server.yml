@@ -1,0 +1,24 @@
+# ============================================================
+#         Configuracion Servidor Zuul GitHub
+# ============================================================
+
+# Indicamos puerto
+server:
+  port: 7000
+  
+# Configuracion de servidor Zuul rutas de servicios
+zuul:
+  ignoredServices: '*'
+  routes:
+    servicio-empleados:
+      path: /empleados/**
+      serviceId: servicio-empleados
+    servicio-cursos:
+      path: /cursos/**
+      serviceId: servicio-cursos
+      
+# Configutacion de Eureka para descubrir donde estan los servicios
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
