@@ -10,12 +10,12 @@ server:
 zuul:
   ignoredServices: '*'
   routes:
-    servicio-empleados:
+    servicio-empleado:
       path: /empleados/**
-      serviceId: servicio-empleados
-    servicio-cursos:
+      serviceId: servicio-empleado
+    servicio-curso:
       path: /cursos/**
-      serviceId: servicio-cursos
+      serviceId: servicio-curso
       
 # Configutacion de Eureka para descubrir donde estan los servicios
 eureka:
