@@ -1,0 +1,16 @@
+# ============================================================
+#     Configuracion Servidor Empleado Config en Repositorio
+# ============================================================
+
+# Puerto por defecto servicio servidor Empleado
+server:
+  port: 8080
+  
+# Configuraciones de servicio servidor Empleado e indicamos donde se encuentra el Sevidor Eureka
+eureka:
+  instance: 
+    leaseRenewalIntervalInSeconds: 5
+    leaseExpirationDurationInSeconds: 2
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
