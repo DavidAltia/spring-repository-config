@@ -5,8 +5,8 @@
 # Propiedades de servicio (puerto/url raiz)
 server:
   port: 8082
-  servlet:
-    contextPath: "/escuela"
+  #servlet:
+    #contextPath: "/escuela"
 
 # Registro de servicio en Eureka
 eureka:
