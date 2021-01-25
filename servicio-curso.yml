@@ -4,7 +4,7 @@
 
 # Propiedades de servicio (puerto/url raiz)
 server:
-  port: 8082
+  port: 8090
   #servlet:
     #contextPath: "/escuela"
 
