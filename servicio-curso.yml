@@ -2,12 +2,27 @@
 #         Configuracion aplicacion Servidor Curso GitHub
 # ============================================================
 
+# Nombre servicio servidor y configuracion de base de datos e hibernate JPA
+spring:
+  application:
+    name: "servicio-curso"
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: abc123.
+    url: jdbc:mysql://localhost:3306/cursos?serverTimezone=Europe/Madrid
+  jpa:
+    hibernate:
+      naming:
+        implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    
 # Propiedades de servicio (puerto/url raiz)
 server:
-  port: 8090
-  #servlet:
-    #contextPath: "/escuela"
-
+  port: 8080
+  servlet:
+    contextPath: "/escuela"
+    
 # Registro de servicio en Eureka
 eureka:
   instance:
